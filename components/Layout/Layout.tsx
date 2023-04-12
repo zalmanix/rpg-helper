@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
+import React, { ReactNode } from "react";
+import Head from "next/head";
 
-import { Header } from "./Header"
-import { Footer } from "./Footer"
-import { title, description } from "../../constants/header"
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { title, description } from "../../constants/header";
 
-const Layout = ({ children}: {children?: ReactNode}) => (
+export const Layout = ({ children }: { children?: ReactNode }) => (
   <div className="bg-background text-textHighEmphasis">
     <Head>
       <title>{title}</title>
@@ -22,6 +22,4 @@ const Layout = ({ children}: {children?: ReactNode}) => (
 
     <Footer />
   </div>
-)
-
-export default Layout
+);
