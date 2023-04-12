@@ -1,9 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-enum ScrollDirectionEnum  {
-   Top = "top",
-   Down = "down",
-   Up = "up",
+enum ScrollDirectionEnum {
+  Top = "top",
+  Down = "down",
+  Up = "up",
+}
+
+interface CustomWindow extends Window {
+  lastScrollY: number;
 }
 
 export const useScrollDirection = () => {
@@ -15,19 +19,19 @@ export const useScrollDirection = () => {
 
       if (currentScrollY === 0) {
         setScrollDir(ScrollDirectionEnum.Top);
-      } else if (currentScrollY > window.lastScrollY) {
+      } else if (currentScrollY > (window as unknown as CustomWindow).lastScrollY) {
         setScrollDir(ScrollDirectionEnum.Down);
-      } else if (currentScrollY < window.lastScrollY) {
+      } else if (currentScrollY < (window as unknown as CustomWindow).lastScrollY) {
         setScrollDir(ScrollDirectionEnum.Up);
       }
 
-      window.lastScrollY = currentScrollY;
+      (window as unknown as CustomWindow).lastScrollY = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

@@ -1,3 +1,3 @@
-export const joinStrings = (strings, separator) => {
+export const joinStrings = (strings, separator): string => {
   return strings.join(separator);
 };
