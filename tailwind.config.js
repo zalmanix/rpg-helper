@@ -14,6 +14,7 @@ module.exports = {
         primaryVariant: "#3700b3",
         secondary: "#03dac5",
         secondaryVariant: "#018786",
+        secondaryDarkVariant: "#125e5e",
         background: "#121212",
         black: "#000000",
         textHighEmphasis: "#ffffff86",

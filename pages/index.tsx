@@ -1,44 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
 
+import { LoginComponent } from "components/Layout/LoginComponent";
 import { Layout } from "components/Layout/Layout";
-import supabase from "config/supabaseClient";
 
 const IndexPage = () => {
-  // const [error, setError] = useState(null);
-  // const [data, setData] = useState(null);
+  const supabaseClient = useSupabaseClient();
+  const user = useUser();
 
-  // console.log(supabase);
-
-  // useEffect(() => {
-  //   const fetch = async () => {
-  //     const { data, error } = await supabase.from("CallOfCthulhu1920").select();
-
-  //     if (error) {
-  //       setError("Error");
-  //       setData(null);
-  //       console.log(error);
-  //     }
-  //     if (data) {
-  //       setData(data);
-  //       console.log(data);
-  //       setError(null);
-  //     }
-  //   };
-
-  //   void fetch();
-  // }, []);
-  async function signInWithGoogle() {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-    });
-    console.log(data, error);
-  }
+  if (!user) return <LoginComponent />;
 
   return (
     <Layout>
-      <div className="bg-red-800 text-white" onClick={void signInWithGoogle}>
-        login test
-      </div>
+      <button onClick={() => void supabaseClient.auth.signOut()}>Sign out</button>
+      <p>user:</p>
+      <pre>{JSON.stringify(user, null, 2)}</pre>
+      <p>client-side data fetching with RLS</p>
     </Layout>
   );
 };

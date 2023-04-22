@@ -16,9 +16,9 @@ export const Layout = ({ children }: { children?: ReactNode }) => (
 
     <Header />
 
-    <div className="h-[72px]" />
+    <div className="h-[80px]" />
 
-    <div className="container min-h-[85vh]">{children}</div>
+    <div className="min-h-[87vh] w-full">{children}</div>
 
     <Footer />
   </div>

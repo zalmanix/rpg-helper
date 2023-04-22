@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #121212;
+}
+
+.ant-tooltip-inner {
+  color: #ffffff90 !important;
+}
+
+#auth-sign-in {
+  display: none;
+}
+
+.supabase-auth-ui_ui-divider {
+  display: none !important;
+}
+
+.supabase-auth-ui_ui-button {
+  background-color: #000;
+}
+
+.supabase-auth-ui_ui-button:hover {
+  background-color: #121212;
+}
