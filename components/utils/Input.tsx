@@ -15,7 +15,7 @@ export const Input: React.FC<InputProps> = ({ min = 0, max = 200, additionalClas
       className={
         joinStrings(
           [
-            "appearance-none block w-24 px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
+            "block w-24 appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-700 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500",
             additionalClass,
           ],
           " ",
