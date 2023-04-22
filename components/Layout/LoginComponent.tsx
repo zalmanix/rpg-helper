@@ -16,7 +16,7 @@ export const LoginComponent = () => {
           <p className="py-4">Please log to use the app</p>
 
           <Auth
-            redirectTo="http://localhost:3000/"
+            redirectTo="/"
             appearance={{ theme: ThemeSupa }}
             supabaseClient={supabaseClient}
             providers={["google"]}
