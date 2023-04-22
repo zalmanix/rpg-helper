@@ -16,7 +16,7 @@ export const LoginComponent = () => {
           <p className="py-4">Please log to use the app</p>
 
           <Auth
-            redirectTo="/"
+            redirectTo="https://rpg-helper-mu.vercel.app/"
             appearance={{ theme: ThemeSupa }}
             supabaseClient={supabaseClient}
             providers={["google"]}
