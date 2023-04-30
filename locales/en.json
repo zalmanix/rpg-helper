@@ -1,0 +1,14 @@
+{
+  "login": {
+    "title": "Login11111",
+    "description": "Please log to use the app"
+  },
+  "header": {
+    "home": "Home",
+    "characters": "Characters",
+    "campaigns": "Campaigns"
+  },
+  "footer": {
+    "title": "Made by zalmanix. More updates coming soon 🤛"
+  }
+}

@@ -25,3 +25,34 @@ body {
 .supabase-auth-ui_ui-button:hover {
   background-color: #121212;
 }
+
+.ant-select-selector {
+  border: none !important;
+  background-color: #000 !important;
+}
+
+.ant-select-arrow,
+.ant-select-selection-item,
+.ant-select-selector,
+.ant-select-dropdown {
+  color: #ffffff90 !important;
+}
+
+.ant-select-dropdown {
+  background-color: #121212 !important;
+}
+
+.ant-select-item {
+  color: #ffffff90 !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: #121212 !important;
+}
+
+.ant-select-item-option-active > .ant-select-item-option-content {
+  transition: all;
+  transition-duration: 800ms;
+  transform: translate(20%);
+  color: #bb86fc !important;
+}
