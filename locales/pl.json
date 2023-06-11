@@ -10,5 +10,14 @@
   },
   "footer": {
     "title": "Made by zalmanix. More updates coming soon 🤛"
+  },
+  "COC": {
+    "name": "Name",
+    "player": "Player",
+    "job": "Job",
+    "age": "Age",
+    "sex": "Sex",
+    "birthPlace": "Birth Place",
+    "home": "Home"
   }
 }
